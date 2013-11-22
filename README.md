@@ -14,7 +14,7 @@ The knockout-instant binding is available in the bower repository. To install it
 
 ## Building
 
-To build immybox from the less and coffeescript source, do the following in a node.js enabled environment:
+To build knockout-instant from the coffeescript source, do the following in a node.js enabled environment:
 
 ```
 npm install -g grunt-cli
