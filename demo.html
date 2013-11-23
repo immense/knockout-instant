@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knockout Instant</title>
+    <link rel='stylesheet' type='text/css' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js'></script>
+    <script src='knockout-instant.min.js'></script>
+    <style type='text/css'>
+      /* yanked from bootstrap demos: http://getbootstrap.com/examples/jumbotron-narrow/ */
+
+      /* Space out content a bit */
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      /* Everything but the jumbotron gets side spacing for mobile first views */
+      .header,
+      .marketing,
+      .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      /* Custom page header */
+      .header {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      /* Make the masthead heading the same height as the navigation */
+      .header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+      }
+
+      /* Custom page footer */
+      .footer {
+        padding-top: 19px;
+        color: #777;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      /* Customize container */
+      @media (min-width: 768px) {
+        .container {
+          max-width: 730px;
+        }
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 40px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /* Responsive: Portrait tablets and up */
+      @media screen and (min-width: 768px) {
+        /* Remove the padding we set earlier */
+        .header,
+        .marketing,
+        .footer {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        /* Space out the masthead */
+        .header {
+          margin-bottom: 30px;
+        }
+        /* Remove the bottom border on the jumbotron for visual effect */
+        .jumbotron {
+          border-bottom: 0;
+        }
+      }
+
+      dd {
+        margin-bottom: 1em;
+      }
+
+    </style>
+
+    <script type='text/javascript'>
+      $(function() {
+
+        ko.applyBindings({
+          demoValue: ko.observable()
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+        <ul class='nav nav-pills pull-right'>
+          <li class='active'><a href="#">Demo</a></li>
+          <li><a href='https://github.com/immense/knockout-instant'>Code</a></li>
+        </ul>
+        <h3 class='text-muted'>Knockout Instant</h3>
+      </div>
+      <div class='jumbotron'>
+        <h1>Knockout Instant Demo</h1>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+
+          <h2>Simple example</h2>
+          <p>Use the <code>instant</code> binding on any <code>input</code> element, that gets values from typing (such as input[type=text] or textarea).</p>
+
+          <label>View Model:</label>
+<pre>
+ko.applyBindings({
+  demoValue: ko.observable()
+});</pre>
+
+          <label>Markup:</label>
+<pre>
+&lt;input type='text' data-bind='instant: demoValue'&gt;
+&lt;p&gt;
+  &lt;strong&gt;Value:&lt;/strong&gt;
+  &lt;span data-bind='text: demoValue'&gt;&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+
+          <h3>Result:</h3>
+          <input type='text' class='form-control' data-bind='instant: demoValue'>
+          <p>
+            <strong>Value:</strong>
+            <span data-bind='text: demoValue'></span>
+          </p>
+
+        </div>
+      </div>
+      <div class='footer'>
+        <p>&copy; Immense Networks 2013</p>
+      </div>
+    </div>
+  </body>
+</html>
